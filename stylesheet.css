@@ -41,6 +41,7 @@ html {
 	color: white;
 	overflow-y: scroll; /* Die Scrollbar auf der Shop Seite verschiebt den Inhalt der Navbar */
 	overflow-x: hidden;
+	user-select: none;
 }
 
 body {
@@ -462,6 +463,7 @@ div.text p {
 	font-size: 1.2em;
 	color: var(--font-color);
 	font-style: normal;
+	user-select: text;
 }
 
 div.text t {
@@ -488,7 +490,8 @@ div.text h1 {
 	color: var(--hover-color);
 	text-align: center;
 	height: 3vw;
-	z-index: 0;
+	z-index: 4;
+	user-select: all;
 }
 
 div.title {
@@ -943,4 +946,27 @@ div.payment button {
 div.payment input {
 	width: 100%;
 	height: 2vw;
+}
+
+div.not_found p {
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	color: var(--hover-color);
+	font-size: 10vw;
+	text-decoration: none;
+	margin: 0px;
+	margin-top: 12vw;
+	text-align: center;
+	line-height: 10vw;
+}
+
+div.not_found span {
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	color: var(--font-color);
+	font-size: 3vw;
+	text-decoration: none;
+	margin: 0px;
+	display: block;
+	text-align: center;
 }

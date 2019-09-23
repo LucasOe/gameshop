@@ -11,6 +11,6 @@
 	</ul>
 	<div class="profile">
 		<div class="profile_name"> <p> Lucas Oelker </p> </div>
-		<form action="/profile.php" class="profile"> <button> <img src="resources/profile_icon.png" alt="Profile" class="profile"> </button> </form>
+		<form action="/404.php" class="profile"> <button> <img src="resources/profile_icon.png" alt="Profile" class="profile"> </button> </form>
 	</div>
 </div>
