@@ -120,7 +120,7 @@ Hinweis: Das Spiel ist aktuell nur auf Englisch verfügbar.
 Erstellt von Proletariat
 ",
 	/* 04 */ "
-<tPhoenix Point</t>
+<t>Phoenix Point</t>
 Phoenix Point ist das neue Strategiespiel des Machers der original X-COM-Serie. Es verbindet rundenbasierte Taktik mit weltumspannender Strategie im Kampf gegen eine furchteinflößende außerirdische Bedrohung. Dein Gegner mutiert und entwickelt sich, um sich an deine Taktiken anzupassen und sorgt so für eine Bandbreite an Herausforderungen und Überraschungen auf dem Schlachtfeld.
 
 Erstellt von Snapshot Games
