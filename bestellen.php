@@ -16,10 +16,10 @@
 						session_start();
 
 						if(!isset($_SESSION['payment'])) {
-								$_SESSION['payment'] = 'paypal'; //Standart Bezahl Typ
+							$_SESSION['payment'] = 'paypal'; //Standart Bezahl Typ
 						}
 						if(!isset($pm)) {
-								$pm = 'paypal'; //Standart Bezahl Typ
+							$pm = 'paypal'; //Standart Bezahl Typ
 						}
 
 						if(isset($_GET["pm"])) {
@@ -37,7 +37,7 @@
 					<div class="payment">
 						<?php
 							if($_SESSION['payment'] == 'paypal') 		{ include "./pm/paypal.php"; }
-							if($_SESSION['payment'] == 'mastercard') { include "./pm/mastercard.php"; }
+							if($_SESSION['payment'] == 'mastercard') 	{ include "./pm/mastercard.php"; }
 							if($_SESSION['payment'] == 'visa') 			{ include "./pm/visa.php"; }
 						?>
 					</div>

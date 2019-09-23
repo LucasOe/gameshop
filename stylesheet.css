@@ -1,923 +1,934 @@
 :root {
-	--main-color: 					#202020;
-	--background-color: 		#121212;
-	--font-color: 					#BDBDBD;
-	--hover-color: 					#ffffff;
+  --main-color: #202020;
+  --background-color: #121212;
+  --font-color: #bdbdbd;
+  --hover-color: #ffffff;
 
-	--padding: 							0.7vw;
+  --padding: 0.7vw;
 
-	--font-family: 					'Open Sans', sans-serif;
+  --font-family: "Open Sans", sans-serif;
 
-	--nav-height: 					3.7em;
-	--nav-font-size: 				14px;
+  --nav-height: 3.7em;
+  --nav-font-size: 14px;
 
-	--product-row:					2; /* Anzahl der Produkte in einer Reihe */
-	--product-width: 				27vw;
-	--product-height: 			3vh;
+  --product-row: 2; /* Anzahl der Produkte in einer Reihe */
+  --product-width: 27vw;
+  --product-height: 3vh;
 
-	--shadow-size:					9px;
-	--shadow-blur:					12px;
-	--shadow-spread:				-3px;
-	--shadow-opacity:				0.8;
+  --shadow-size: 9px;
+  --shadow-blur: 12px;
+  --shadow-spread: -3px;
+  --shadow-opacity: 0.8;
 
-	--info-width:						60vw;
-	--info-padding:					1vw;
-	--info-title-height:		4vw;
-	--info-line-height: 		2vw;
-	--info-button-height:		4vw;
+  --info-width: 60vw;
+  --info-padding: 1vw;
+  --info-title-height: 4vw;
+  --info-line-height: 2vw;
+  --info-button-height: 4vw;
 
-	--cart-remove-width: 		1.7vw;
-	--cart-remove-padding: 	0.7vw;
-	--cart-button-height:   3vw;
-	--cart-empty-height: 		5vw;
+  --cart-remove-width: 1.7vw;
+  --cart-remove-padding: 0.7vw;
+  --cart-button-height: 3vw;
+  --cart-empty-height: 5vw;
 
-	--order-width: 					40vw;
+  --order-width: 40vw;
 }
 
-
-
 html {
-	margin: 								0px;
-  padding: 								0px;
-	background-color: 			var(--background-color);
-  color:                  white;
-	overflow-y: 						scroll; /* Die Scrollbar auf der Shop Seite verschiebt den Inhalt der Navbar */
-	overflow-x: 						hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--background-color);
+  color: white;
+  overflow-y: scroll; /* Die Scrollbar auf der Shop Seite verschiebt den Inhalt der Navbar */
+  overflow-x: hidden;
 }
 
 body {
-  margin: 								0px;
-  padding: 								0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-button:focus, input:focus {
-	outline:							 none;
+button:focus,
+input:focus {
+  outline: none;
 }
 
 div.nav {
-	height: 								var(--nav-height);
-	background-color: 			var(--main-color);
-	overflow: 							hidden;
-	z-index: 								9;
+  height: var(--nav-height);
+  background-color: var(--main-color);
+  overflow: hidden;
+  z-index: 9;
 }
 
 div.nav button {
-	width: 									100%;
-	height: 								100%;
-	margin: 								0px;
-	padding: 								0px;
-	background-color: 			var(--main-color);
-	border: 								none;
-	cursor: 								pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
 }
 
 div.nav button:hover img {
-	opacity: 								1;
+  opacity: 1;
 }
 
 div.nav ul {
-	height: 								var(--nav-height);
-	margin: 								0px;
-	padding: 								0px;
-  list-style-type: 				none;
-  overflow: 							hidden;
-	float: 									left;
+  height: var(--nav-height);
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  float: left;
 }
 
 div.nav li {
-	display: 								block;
-	height: 								100%;
-	float: 									left;
-	position: 							relative;
-	cursor: 								pointer;
+  display: block;
+  height: 100%;
+  float: left;
+  position: relative;
+  cursor: pointer;
 }
 
 div.nav li p {
-	margin: 0px;
+  margin: 0px;
 }
 
 div.nav li a {
-	float: 									left;
-	font-family: 						'Open Sans', sans-serif;
-	text-transform: 				uppercase;
-	color: 									var(--font-color);
-	font-size: 							1em;
-	text-decoration: 				none;
-	padding: 								0 1em;
-	letter-spacing: 				0.075em;
-	display: 								flex;
-	height:									100%;
-	align-items: 						center;
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: var(--font-color);
+  font-size: 1em;
+  text-decoration: none;
+  padding: 0 1em;
+  letter-spacing: 0.075em;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 div.nav li a:hover {
-	color:  								var(--hover-color);
+  color: var(--hover-color);
 }
 
 div.nav form.logo {
-	margin: 								0px;
-	float: 									left;
-	display: 								block;
-  width: 									var(--nav-height);
-  height: 								var(--nav-height);
-	padding: 								0 1em;
+  margin: 0px;
+  float: left;
+  display: block;
+  width: var(--nav-height);
+  height: var(--nav-height);
+  padding: 0 1em;
 }
 
 div.nav img.logo {
-	margin-top: 						0px;
-  width: 									100%;
-  height: 								100%;
-	opacity: 								0.9;
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
 }
 
 div.nav form.profile {
-	width: 									var(--nav-height);
-  height: 								var(--nav-height);
-	margin: 								0px;
-	float: 									right;
-	display: 								flex;
-	justify-content: 				center;
+  width: var(--nav-height);
+  height: var(--nav-height);
+  margin: 0px;
+  float: right;
+  display: flex;
+  justify-content: center;
 }
 
 div.nav img.profile {
-	margin-top: 						0px;
-	width: 									calc(var(--nav-height) / 1.5);
-  height: 								calc(var(--nav-height) / 1.5);
-	opacity: 								0.9;
+  margin-top: 0px;
+  width: calc(var(--nav-height) / 1.5);
+  height: calc(var(--nav-height) / 1.5);
+  opacity: 0.9;
 }
 
 div.nav li::before {
-	height: 								0px;
-	background: 						#0078f2;
-	content: 								"";
-	display: 								block;
-	position: 							absolute;
-	width: 									100%;
-	bottom: 								0px;
-	transition: 						height .2s ease-in-out;
+  height: 0px;
+  background: #0078f2;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  transition: height 0.2s ease-in-out;
 }
 
 div.nav li.active::before {
-	height: 								5px;
+  height: 5px;
 }
 
 div.nav li:hover::before {
-	height: 								5px;
+  height: 5px;
 }
 
 div.profile {
-	margin-right: 1em;
+  margin-right: 1em;
 }
 
 div.profile_name {
-	float: 									right;
-	height: 								100%;
-	display: 								flex;
-	align-items: 						center;
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 div.profile_name p {
-	float: 									right;
-	margin: 								0px;
-	font-family: 						'Open Sans', sans-serif;
-	text-transform: 				uppercase;
-	color: 									var(--font-color);
-	font-size: 							0.8em;
-	text-decoration: 				none;
-	padding: 								0 1em;
-	letter-spacing: 				0.05em;
-	line-height: 						100%;
+  float: right;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: var(--font-color);
+  font-size: 0.8em;
+  text-decoration: none;
+  padding: 0 1em;
+  letter-spacing: 0.05em;
+  line-height: 100%;
 }
 
 div.search_bar {
-	position: 							absolute;
-	padding: 								calc(var(--padding) + var(--info-padding));
-	right: 									0px;
+  position: absolute;
+  padding: calc(var(--padding) + var(--info-padding));
+  right: 0px;
 }
 
 div.search_bar form {
-	margin: 								0px;
+  margin: 0px;
 }
 
 div.search_bar input {
-	width: 									12vw;
-	height: 								1.5vw;
-	padding: 								0px 1em;
-	color: 									var(--hover-color);
-	background-color:				var(--main-color);
-	border: 								none;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  width: 12vw;
+  height: 1.5vw;
+  padding: 0px 1em;
+  color: var(--hover-color);
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.search_bar input::placeholder {
-	text-align: 						center;
+  text-align: center;
 }
 
 div.search_bar button {
-	background-color: 			transparent;
-	border: 								none;
-	width: 									1.5vw;
-	padding: 								0px;
-	margin: 								0px 1em;
-	float: 									left;
-	cursor: 								pointer;
+  background-color: transparent;
+  border: none;
+  width: 1.5vw;
+  padding: 0px;
+  margin: 0px 1em;
+  float: left;
+  cursor: pointer;
 }
 
 div.search_bar img {
-	width: 									100%;
-	opacity: 								0.9;
+  width: 100%;
+  opacity: 0.9;
 }
 
 div.search_bar button:hover img {
-	opacity: 								1;
+  opacity: 1;
 }
 
 div.shop {
-	width: 									calc(calc(var(--product-width) + calc(var(--padding) * 2)) * var(--product-row)); /* Gesamtlänge einer Reihe */
-	min-height: 						100%;
-	margin-left: 						auto;
-  margin-right: 					auto;
-	margin-top:							var(--info-padding);
-	margin-bottom:					var(--info-padding);
-	overflow: 							auto;
+  width: calc(
+    calc(var(--product-width) + calc(var(--padding) * 2)) * var(--product-row)
+  ); /* Gesamtlänge einer Reihe */
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--info-padding);
+  margin-bottom: var(--info-padding);
+  overflow: auto;
 }
 
 div.shop_item {
-	width: 									var(--product-width);
-	margin: 								var(--padding);
-	float: 									left;
-	position: 							relative;
+  width: var(--product-width);
+  margin: var(--padding);
+  float: left;
+  position: relative;
 }
 
 div.shop_item button {
-	width: 									var(--product-width);
-	padding: 								0px;
-	background-color:				var(--main-color);
-  border: 								none;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
-	cursor: 								pointer;
+  width: var(--product-width);
+  padding: 0px;
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
+  cursor: pointer;
 }
 
 div.shop_item form {
-	margin: 								0px;
+  margin: 0px;
 }
 
 div.shop_item:hover p {
-	color: 									var(--hover-color);
+  color: var(--hover-color);
 }
 
 div.shop_item h1 {
-	display: 								flex;
-	align-items: 						center;
-	height: 								1.5vw;
-	margin: 								0px;
-	padding: 								0px;
-	background-color: 			var(--main-color);
-	font-family: 						var(--font-family);
-	font-size:							1vw;
-	color: 									var(--hover-color);
-	text-align: 						center;
+  display: flex;
+  align-items: center;
+  height: 1.5vw;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--main-color);
+  font-family: var(--font-family);
+  font-size: 1vw;
+  color: var(--hover-color);
+  text-align: center;
 }
 
 div.shop_item p {
-	margin: 								0px;
-	height: 								1.5vw;
-	display: 								flex;
-	align-items: 						center;
-	justify-content: 				space-between;
+  margin: 0px;
+  height: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 div.shop_item::after {
-	pointer-events:					none;
-	opacity:								0;
-	background: 						#ffffff;
-	transition: 						opacity .3s ease-in-out;
-  content: 								"";
-	display: 								block;
-  width: 									100%;
-  height: 								100%;
-  position: 							absolute;
-	top: 										0px;
-	left: 									0px;
-  z-index: 								1;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 div.shop_item:hover::after {
-	opacity: 								0.1;
+  opacity: 0.1;
 }
 
 div.store_image {
-	position: 							relative;
-	width: 									100%;
-	height: 								10vw;
+  position: relative;
+  width: 100%;
+  height: 10vw;
 }
 
 div.store_image img.primary {
-	display:								block;
-  width: 									100%;
-	height: 								10vw;
-	object-fit: 						cover;
-	z-index: 								0;
-	position:							 	absolute;
+  display: block;
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+  z-index: 0;
+  position: absolute;
 }
 
 div.logo_wrapper {
-	display: 								block;
-	position: 							relative;
-	width: 									100%;
-	height: 								100%;
-	align-items: 						center;
-	z-index: 								2;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  z-index: 2;
 }
 
 div.logo {
-	width: 									50%;
-	height: 								100%;
-	margin: 								auto;
-	align-items: 						center;
-	display: 								flex;
-	position: 							relative;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 div.details_wrapper dev {
-	float: 									left;
-	font-size: 							0.7vw;
-	color: 									var(--font-color);
-	font-family: 						var(--font-family);
+  float: left;
+  font-size: 0.7vw;
+  color: var(--font-color);
+  font-family: var(--font-family);
 }
 
 div.details_wrapper price {
-	float: 									right;
-	font-size: 							0.8vw;
-	color: 									var(--hover-color);
-	font-family: 						var(--font-family);
+  float: right;
+  font-size: 0.8vw;
+  color: var(--hover-color);
+  font-family: var(--font-family);
 }
 
 div.store_image img.logo {
-	width: 									100%;
-	height: 								auto;
+  width: 100%;
+  height: auto;
 }
 
 div.details_wrapper {
-	padding: 								0.8vw;
-	height: 								3vw;
+  padding: 0.8vw;
+  height: 3vw;
 }
 
 div.details_wrapper span.details {
-	width: 									80%;
-	height: 								100%;
-	float: 									left;
+  width: 80%;
+  height: 100%;
+  float: left;
 }
 
 div.details_wrapper span.price {
-	height: 								100%;
-	display: 								flex;
-	align-items:						center;
-	justify-content:				flex-end;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 div.footer {
-	padding: 								1em;
-	border-top: 						1px solid #333;
-	background-color: 			var(--main-color);
+  padding: 1em;
+  border-top: 1px solid #333;
+  background-color: var(--main-color);
 }
 
 div.footer hr {
-	border-color: 					#333;
+  border-color: #333;
 }
 
 div.footer p {
-	margin: 								0px;
-	font-size: 							0.7vw;
-	color: 									var(--font-color);
-	font-family: 						var(--font-family);
+  margin: 0px;
+  font-size: 0.7vw;
+  color: var(--font-color);
+  font-family: var(--font-family);
 }
 
 div.info {
-	background-color: 			var(--background-color);
+  background-color: var(--background-color);
 }
 
 div.banner {
-	width: 									100%;
-	height: 								30vw;
-	position: 							relative;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  width: 100%;
+  height: 30vw;
+  position: relative;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.banner img {
-	display: 								block;
-	width: 									100%;
-	height: 								100%;
-	object-fit: 						cover;
-	z-index: 								0;
-	position:							 	absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: absolute;
 }
 
 div.banner img.logo {
-	width: 									100%;
-	height: 								auto;
+  width: 100%;
+  height: auto;
 }
 
 div.logo_info_wrapper {
-	width: 									30%;
-	height: 								100%;
-	margin: 								auto;
-	align-items: 						center;
-	display: 								flex;
-	position: 							relative;
+  width: 30%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 div.banner video {
-	display: 								block;
-	width: 									100%;
-	height: 								100%;
-	object-fit: 						cover;
-	position:							 	absolute;
-	z-index: 								-1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 div.text p {
-	width: 									35%;
-	padding: 								var(--info-padding);
-	padding-left: 					10%;
-	margin: 								0px;
-	white-space: 						pre-wrap;
-	font-family: 						var(--font-family);
-	font-size: 							1.2em;
-	color: 									var(--font-color);
-	font-style: 						normal;
+  width: 35%;
+  padding: var(--info-padding);
+  padding-left: 10%;
+  margin: 0px;
+  white-space: pre-wrap;
+  font-family: var(--font-family);
+  font-size: 1.2em;
+  color: var(--font-color);
+  font-style: normal;
 }
 
 div.text t {
-	font-size: 							2em;
-	color: 									var(--hover-color);
+  font-size: 2em;
+  color: var(--hover-color);
 }
 
 div.text i {
-	font-style:							italic;
+  font-style: italic;
 }
 
 div.text b {
-	font-style:							bold;
+  font-style: bold;
 }
 
 div.text h1 {
-	position: 							absolute;
-	float: 									left;
-	width: 									100%;
-	margin: 								0px;
-	padding: 								0px;
-	font-family: 						var(--font-family);
-	font-size: 							1.8vw;
-	color: 									var(--hover-color);
-	text-align: 						center;
-	height: 								3vw;
-	z-index: 								0;
+  position: absolute;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-family);
+  font-size: 1.8vw;
+  color: var(--hover-color);
+  text-align: center;
+  height: 3vw;
+  z-index: 0;
 }
 
 div.title {
-	padding-top:						var(--padding);
-	display: 								flex;
-	height: 								3vw;
+  padding-top: var(--padding);
+  display: flex;
+  height: 3vw;
 }
 
 div.wishlist {
-	width: 									100%;
-	z-index: 								3;
+  width: 100%;
+  z-index: 3;
 }
 
 div.wishlist_button form {
-	padding: 								0px;
-	margin: 								0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 div.wishlist_button button {
-	background-color:			 	transparent;
-	border: 								none;
-	width: 									100%;
-	height: 								100%;
-	padding: 								0px;
-	margin: 								0px;
-	cursor: 								pointer;
-	display:							 	flex;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  display: flex;
 }
 
 div.wishlist_button img {
-	width: 									1.5vw;
-	height: 								auto;
-	margin: 								auto 0;
-	float: 									left;
-	opacity: 								0.9;
+  width: 1.5vw;
+  height: auto;
+  margin: auto 0;
+  float: left;
+  opacity: 0.9;
 }
 
 div.wishlist_button {
-	position: 							relative;
-	background-color: 			var(--main-color);
-	display: 								flex;
-	float: 									right;
-	padding: 								0px 1em;
-	height: 								100%;
-	cursor: 								pointer;
-	margin-right: 					var(--padding);
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  position: relative;
+  background-color: var(--main-color);
+  display: flex;
+  float: right;
+  padding: 0px 1em;
+  height: 100%;
+  cursor: pointer;
+  margin-right: var(--padding);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.wishlist_button p {
-	float: 									right;
-	padding: 								0px;
-	width: 									100%;
-	line-height: 						3vw;
-	font-family: 						var(--font-family);
-	font-size: 							1.1em;
-	color: 									var(--font-color);
-	letter-spacing: 				0.05em;
-	font-style: 						normal;
-	text-align: 						left;
+  float: right;
+  padding: 0px;
+  width: 100%;
+  line-height: 3vw;
+  font-family: var(--font-family);
+  font-size: 1.1em;
+  color: var(--font-color);
+  letter-spacing: 0.05em;
+  font-style: normal;
+  text-align: left;
 }
 
 div.wishlist_button button:hover img {
-	opacity: 								1;
+  opacity: 1;
 }
 
 div.wishlist_button:hover::after {
-		opacity: 							0.1;
+  opacity: 0.1;
 }
 
 div.wishlist_button::after {
-	pointer-events:					none;
-	opacity: 								0;
-	background: 						#ffffff;
-	transition: 						opacity .3s ease-in-out;
-  content: 								"";
-	display: 								block;
-  width: 									100%;
-  height: 								100%;
-  position: 							absolute;
-	top: 										0px;
-	left: 									0px;
-  z-index: 								1;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 div.purchase {
-	display: 								flex;
-	justify-content: 				center;
+  display: flex;
+  justify-content: center;
 }
 
 div.purchase form {
-	margin: 								0px;
-	margin-bottom:					2em;
+  margin: 0px;
+  margin-bottom: 2em;
 }
 
 div.purchase button {
-	position: 							relative;
-	width: 									22vw;
-	border:									none;
-	padding: 								0px;
-	margin: 								0.7em;
-	cursor: 								pointer;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  position: relative;
+  width: 22vw;
+  border: none;
+  padding: 0px;
+  margin: 0.7em;
+  cursor: pointer;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.purchase button:hover::after {
-		opacity: 							0.1;
+  opacity: 0.1;
 }
 
 div.purchase button::after {
-	pointer-events:					none;
-	opacity: 								0;
-	background: 						#ffffff;
-	transition: 						opacity .3s ease-in-out;
-  content: 								"";
-	display: 								block;
-  width: 									100%;
-  height: 								100%;
-  position: 							absolute;
-	top: 										0px;
-	left: 									0px;
-  z-index: 								1;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 div.purchase button p.edition {
-	display: 								block;
-	position: 							relative;
-	margin: 								0px;
-	width:									100%;
-	background-color: 			var(--main-color);
-	padding: 								1em 0px;
-	color: 									var(--hover-color);
-	font-size: 							1.1em;
-	font-weight: 						bold;
+  display: block;
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 1em 0px;
+  color: var(--hover-color);
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 div.purchase button p.price {
-	display: 								block;
-	position: 							relative;
-	padding: 								0px;
-	margin: 								0px;
-	width:									100%;
-	background-color: 			var(--main-color);
-	padding-bottom: 				1em;
-	font-size: 							1.1em;
+  display: block;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  background-color: var(--main-color);
+  padding-bottom: 1em;
+  font-size: 1.1em;
 }
 
 div.purchase img {
-	width: 									100%;
-	max-height: 						8.7vw;
-	object-fit: 						cover;
+  width: 100%;
+  max-height: 8.7vw;
+  object-fit: cover;
 }
 
 div.gallery {
-	display: 								grid;
-	grid-template-columns: 	1fr 1fr;
-	grid-template-rows: 		1fr;
-	grid-gap: 							20px;
-	padding: 								20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
 }
 
 div.gallery img {
-	width: 									100%;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  width: 100%;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.cart_item_wrapper {
-	width: 									var(--product-width);
-	padding: 								var(--padding);
-	position: 							relative;
-	margin: 								auto;
-	display: 								flex;
+  width: var(--product-width);
+  padding: var(--padding);
+  position: relative;
+  margin: auto;
+  display: flex;
 }
 
 div.cart_item_wrapper button {
-	width: 									var(--product-width);
-	padding: 								0px;
-	background-color:				var(--main-color);
-  border: 								none;
-	cursor: 								pointer;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  width: var(--product-width);
+  padding: 0px;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.cart_item_wrapper form {
-	margin: 								0px;
+  margin: 0px;
 }
 
 div.cart_item_wrapper p {
-	margin: 								0px;
-	height: 								1.5vw;
-	display: 								flex;
-	align-items: 						center;
-	justify-content: 				space-between;
+  margin: 0px;
+  height: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 div.cart_item_wrapper dev {
-	float: 									left;
-	font-size: 							0.7vw;
-	color: 									var(--font-color);
-	font-family: 						var(--font-family);
+  float: left;
+  font-size: 0.7vw;
+  color: var(--font-color);
+  font-family: var(--font-family);
 }
 
 div.cart_item_wrapper price {
-	float: 									right;
-	font-size: 							0.8vw;
-	color: 									var(--hover-color);
-	font-family: 						var(--font-family);
+  float: right;
+  font-size: 0.8vw;
+  color: var(--hover-color);
+  font-family: var(--font-family);
 }
 
 div.cart_item_wrapper:hover p {
-	color: 									var(--hover-color);
+  color: var(--hover-color);
 }
 
 div.cart_item_wrapper h1 {
-	display: 								flex;
-	align-items: 						center;
-	height: 								1.5vw;
-	margin: 								0px;
-	padding: 								0px;
-	background-color: 			var(--main-color);
-	font-family: 						var(--font-family);
-	font-size:							0.7vw;
-	color: 									var(--hover-color);
-	text-align: 						center;
+  display: flex;
+  align-items: center;
+  height: 1.5vw;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--main-color);
+  font-family: var(--font-family);
+  font-size: 0.7vw;
+  color: var(--hover-color);
+  text-align: center;
 }
 
 div.cart_item {
-	display: 								block;
-	position: 							relative;
-	width: 									100%;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 div.cart_item::after {
-	pointer-events:					none;
-	opacity:								0;
-	background: 						#ffffff;
-	transition: 						opacity .3s ease-in-out;
-  content: 								"";
-	display: 								block;
-  width: 									100%;
-  height: 								100%;
-  position: 							absolute;
-	top: 										0px;
-	left: 									0px;
-  z-index: 								1;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 div.cart_item:hover::after {
-	opacity: 								0.1;
+  opacity: 0.1;
 }
 
 div.cart_remove {
-	width: 									var(--cart-remove-width);
-	height: 								var(--cart-remove-width);
-	padding: 								0px;
-	padding-left: 					var(--cart-remove-padding);
-	padding-top: 						var(--padding);
-	margin: 								0px;
-	float: 									right;
+  width: var(--cart-remove-width);
+  height: var(--cart-remove-width);
+  padding: 0px;
+  padding-left: var(--cart-remove-padding);
+  padding-top: var(--padding);
+  margin: 0px;
+  float: right;
 }
 
 div.cart_remove form {
-	width: 									var(--cart-remove-width);
-	height: 								var(--cart-remove-width);
-	padding: 								0px;
-	margin: 								0px;
+  width: var(--cart-remove-width);
+  height: var(--cart-remove-width);
+  padding: 0px;
+  margin: 0px;
 }
 
 div.cart_remove button {
-	width: 									var(--cart-remove-width);
-	height: 								var(--cart-remove-width);
-	background-color: 			var(--background-color);
-	border:									none;
-	padding: 								0px;
-	margin: 								0px;
-	box-shadow: 						none;
-	cursor: 								pointer;
+  width: var(--cart-remove-width);
+  height: var(--cart-remove-width);
+  background-color: var(--background-color);
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  box-shadow: none;
+  cursor: pointer;
 }
 
 div.cart_remove img {
-	width: 									var(--cart-remove-width);
-	height: 								var(--cart-remove-width);
-	padding: 								0px;
-	margin: 								0px;
-	opacity: 								0.9;
+  width: var(--cart-remove-width);
+  height: var(--cart-remove-width);
+  padding: 0px;
+  margin: 0px;
+  opacity: 0.9;
 }
 
 div.cart_remove:hover img {
-	opacity: 								1;
+  opacity: 1;
 }
 
 div.cart_buttons form {
-	width: 									var(--product-width);
-	margin-left: 						auto;
-	margin-right: 					auto;
+  width: var(--product-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.cart_buttons button {
-	display: 								block;
-	position: 							relative;
-	width: 									100%;
-	height: 								var(--cart-button-height);
-	margin: 								0px;
-	padding: 								0px;
-	margin-top: 						var(--padding);
-	background-color: 			var(--main-color);
-	border: 								none;
-	cursor: 								pointer;
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  display: block;
+  position: relative;
+  width: 100%;
+  height: var(--cart-button-height);
+  margin: 0px;
+  padding: 0px;
+  margin-top: var(--padding);
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.cart_buttons button::after {
-	pointer-events:					none;
-	opacity:								0;
-	background: 						#ffffff;
-	transition: 						opacity .3s ease-in-out;
-  content: 								"";
-	display: 								block;
-  width: 									100%;
-  height: 								100%;
-  position: 							absolute;
-	top: 										0px;
-	left: 									0px;
-  z-index: 								1;
+  pointer-events: none;
+  opacity: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 
 div.cart_buttons button:hover::after {
-	opacity: 								0.1;
+  opacity: 0.1;
 }
 
 div.cart_buttons p {
-	height:									var(--cart-button-height);
-	padding: 								0px;
-	margin: 								0px;
-	font-family: 						var(--font-family);
-	font-size:							var(--product-title-size);
-	color: 									var(--font-color);
-	line-height:						var(--cart-button-height);
+  height: var(--cart-button-height);
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--font-family);
+  font-size: var(--product-title-size);
+  color: var(--font-color);
+  line-height: var(--cart-button-height);
 }
 
 div.cart_wrapper {
-	display: 								flex;
-	position: 							absolute;
-	top: 										0px;
-	height: 								100%;
-	width: 									100%;
-	justify-content: 				center;
-	align-items: 						center;
-	pointer-events: 				none;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 div.empty {
-	width: 									30vw;
-	height: 								4vw;
-	margin-left: 						auto;
-	margin-right: 					auto;
-	background-color: 			var(--main-color);
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  width: 30vw;
+  height: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--main-color);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.empty p {
-	line-height: 						4vw;
-	height: 								100%;
-	text-align: 						center;
-	margin: 								0px;
-	font-family: 						var(--font-family);
-	font-size:							var(--product-title-size);
-	color: 									var(--font-color);
-	font-weight: 						400;
-	letter-spacing: 				1px;
+  line-height: 4vw;
+  height: 100%;
+  text-align: center;
+  margin: 0px;
+  font-family: var(--font-family);
+  font-size: var(--product-title-size);
+  color: var(--font-color);
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 div.order_wrapper {
-	display: 								flex;
-	position: 							absolute;
-	top: 										0px;
-	height: 								100%;
-	width: 									100%;
-	justify-content: 				center;
-	align-items: 						center;
-	pointer-events: 				none;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 div.order {
-	width: 									var(--order-width);
-	pointer-events: 				all;
+  width: var(--order-width);
+  pointer-events: all;
 }
 
 div.order form {
-	margin: 								0px;
+  margin: 0px;
 }
 
 div.pm {
-	margin-left: 						auto;
-	margin-right: 					auto;
-	display: 								flex;
-	justify-content: 				center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 div.pm form {
-	margin: 								0px;
-	display: 								flex;
-	align-items: 						center;
+  margin: 0px;
+  display: flex;
+  align-items: center;
 }
 
 div.pm button {
-	border: 								none;
-	background-color: 			var(--background-color);
-	float: 									left;
-	cursor: 								pointer;
-	z-index: 								2;
-	padding: 								0 1em;
+  border: none;
+  background-color: var(--background-color);
+  float: left;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 1em;
 }
 
 div.pm img {
-	width: 									100%;
-	height: 								auto;
-	padding: 								0px;
+  width: 100%;
+  height: auto;
+  padding: 0px;
 }
 
 div.pm active img {
-	opacity: 								1;
+  opacity: 1;
 }
 
 div.pm inactive img {
-	opacity: 								0.8;
+  opacity: 0.8;
 }
 
 div.payment_wrapper {
-	height: 								20vw;
-	margin: 								2em 0;
-	background-color: 			var(--main-color);
-	box-shadow: 						var(--shadow-size) var(--shadow-size) var(--shadow-blur) var(--shadow-spread) rgba(0,0,0,var(--shadow-opacity));
+  height: 20vw;
+  margin: 2em 0;
+  background-color: var(--main-color);
+  box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-blur)
+    var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 div.payment {
-	padding: 								1em;
+  padding: 1em;
 }
 
 div.payment button {
-	width: 100%;
-	height: 2vw;
+  width: 100%;
+  height: 2vw;
 }
 
 div.payment input {
-	width: 100%;
-	height: 2vw;
+  width: 100%;
+  height: 2vw;
 }
