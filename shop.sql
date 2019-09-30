@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `shop` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `shop`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win32 (x86)
 --
 -- Host: 127.0.0.1    Database: shop
@@ -38,7 +40,7 @@ CREATE TABLE `editions` (
 
 LOCK TABLES `editions` WRITE;
 /*!40000 ALTER TABLE `editions` DISABLE KEYS */;
-INSERT INTO `editions` VALUES (0,'Vampire The Masquerade - Bloodlines 2 - Standart Edition','Vampire The Masquerade - Bloodlines 2 - Deluxe Edition','Vampire The Masquerade - Bloodlines 2 - Premium Edition',NULL),(1,NULL,NULL,NULL,NULL),(2,NULL,NULL,NULL,NULL),(3,NULL,NULL,NULL,NULL),(4,NULL,NULL,NULL,NULL),(5,NULL,NULL,NULL,NULL),(6,NULL,NULL,NULL,NULL),(7,NULL,NULL,NULL,NULL),(8,NULL,NULL,NULL,NULL),(9,NULL,NULL,NULL,NULL),(10,NULL,NULL,NULL,NULL),(11,NULL,NULL,NULL,NULL),(12,NULL,NULL,NULL,NULL),(13,NULL,NULL,NULL,NULL);
+INSERT INTO `editions` VALUES (0,'Vampire The Masquerade - Bloodlines 2 - Standart Edition','Vampire The Masquerade - Bloodlines 2 - Deluxe Edition','Vampire The Masquerade - Bloodlines 2 - Premium Edition',NULL),(1,'The Sinking City - Standart Edition','The Sinking City - Necronomicon Edition',NULL,NULL),(2,'Tom Clancy\'s The Division 2 - Standart Edition','Tom Clancy\'s The Division 2 - Gold Edition','Tom Clancy\'s The Division 2 - Ultimate Edition',NULL),(3,'Spellbreak - Alpha','Spellbreak - Mage-Paket','Spellbreak - Battlemage-Paket','Spellbreak - Master-Packet'),(4,'Phoenix Point',NULL,NULL,NULL),(5,'Slime Rancher',NULL,NULL,NULL),(6,'Metro Exodus - Standart Edition','Metro Exodus - Gold Edition',NULL,NULL),(7,'Hades',NULL,NULL,NULL),(8,'Ashen',NULL,NULL,NULL),(9,'Far Cry Primal',NULL,NULL,NULL),(10,'Darksiders III','Darksiders III - The Crucible',NULL,NULL),(11,'Tom Clancy\'s Ghost Reacon Wildlands',NULL,NULL,NULL),(12,'Watch Dogs 2',NULL,NULL,NULL),(13,'World War Z',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `editions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-23 14:41:28
+-- Dump completed on 2019-09-30 13:35:32
