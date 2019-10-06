@@ -42,10 +42,10 @@
 				$wishlist = $_SESSION['wishlist'];
 				$edition = $_SESSION['cart_edition'];
 				foreach($wishlist as $id) {
-					//Fügt Euro zeichen hinterm Preis hinzu. Falls der Preis 0 beträgt, wird er zu "Kostenlost" geändert.
-					if($product_price[$id][$edition[$id]] > 0) {
-						$price = $product_price[$id][$edition[$id]] . "€";
-					} elseif($product_price[$id][$edition[$id]] == 0) {
+					//Fügt Euro zeichen hinterm Preis hinzu. Falls der Preis 0 beträgt, wird er zu "Kostenlos" geändert.
+					if($product_price[$id][0] > 0) {
+						$price = $product_price[$id][0] . "€";
+					} elseif($product_price[$id][0] == 0) {
 						$price = "Kostenlos";
 					}
 					echo '
