@@ -81,13 +81,15 @@
 								} elseif($product_price[$id][$edition] == 0) {
 									$price = "Kostenlos";
 								}
-								echo '
-									<button type="submit" name="edition" value="'.$edition.'">
-										<img src="shop/product_img/'.$product_name[$id].'/Edition_'.$edition.'.jpg" class="primary">
-										<p class="edition"> '.$product_editions[$id][$edition].' </p>
-										<p class="price"> '.$price.' </p>
-									</button>
-								';
+								if($product_editions[$id][$edition]) { //Zeigt Editionen die nicht null sind
+									echo '
+										<button type="submit" name="edition" value="'.$edition.'">
+											<img src="shop/product_img/'.$product_name[$id].'/Edition_'.$edition.'.jpg" class="primary">
+											<p class="edition"> '.$product_editions[$id][$edition].' </p>
+											<p class="price"> '.$price.' </p>
+										</button>
+									';
+								}
 							}
 						?>
 					</form>
