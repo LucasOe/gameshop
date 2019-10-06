@@ -453,8 +453,13 @@ div.banner video {
 	z-index: -1;
 }
 
-div.text p {
-	width: 35%;
+div.text {
+	margin: 1em 0px;
+	margin-bottom: 3em;
+}
+
+div.text p, .purchase p {
+	width: 40%;
 	padding: var(--info-padding);
 	padding-left: 10%;
 	margin: 0px;
@@ -479,30 +484,27 @@ div.text b {
 	font-style: bold;
 }
 
-div.text h1 {
+div.title h1 {
 	position: absolute;
-	float: left;
 	width: 100%;
 	margin: 0px;
-	padding: 0px;
 	font-family: var(--font-family);
-	font-size: 1.8vw;
+	font-size: 1.8em;
 	color: var(--hover-color);
 	text-align: center;
-	height: 3vw;
-	z-index: 4;
-	user-select: all;
+	align-self: center;
 }
 
 div.title {
 	padding-top: var(--padding);
 	display: flex;
-	height: 3vw;
+	height: 4em;
 }
 
 div.wishlist {
 	width: 100%;
-	z-index: 3;
+	height: 3em;
+	align-self: center;
 }
 
 div.wishlist_button form {
@@ -524,9 +526,11 @@ div.wishlist_button button {
 div.wishlist_button img {
 	width: 1.5vw;
 	height: auto;
-	margin: auto 0;
+	margin: 0px;
 	float: left;
 	opacity: 0.9;
+	align-self: center;
+	margin-right: 0.7em;
 }
 
 div.wishlist_button {
@@ -546,13 +550,14 @@ div.wishlist_button p {
 	float: right;
 	padding: 0px;
 	width: 100%;
-	line-height: 3vw;
+	line-height: 3em;
 	font-family: var(--font-family);
 	font-size: 1.1em;
 	color: var(--font-color);
 	letter-spacing: 0.05em;
 	font-style: normal;
 	text-align: left;
+	margin: 0px;
 }
 
 div.wishlist_button button:hover img {

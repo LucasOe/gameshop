@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="./style/stylesheet.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<title> Warenkorb </title>
 	</head>
