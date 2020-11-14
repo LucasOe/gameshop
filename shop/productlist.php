@@ -2,10 +2,10 @@
 	/*
 		Host:		"localhost"
 		User:		"root"
-		Passowrd:	"root"
+		Passowrd:	""
 		Database:	"shop"
 	*/
-	$mysqli = new mysqli('localhost', 'root', 'root', 'shop');
+	$mysqli = new mysqli('localhost', 'root', '', 'shop');
 			
 	$products = $mysqli->query("SELECT * FROM products");
 	$editions = $mysqli->query("SELECT * FROM editions");
